@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Novela V22 | Ultimate Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        :root { --toska: #00fbff; --toska-glow: rgba(0, 251, 255, 0.6); }
+        body { background: #000; color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 0; overflow: hidden; }
+        .toska-text { color: var(--toska); text-shadow: 0 0 15px var(--toska-glow); }
+        .toska-bg { background: var(--toska); color: #000; }
+        .glass-card { background: rgba(15, 15, 15, 0.98); border: 1px solid rgba(0, 251, 255, 0.3); border-radius: 25px; }
+        .cyber-input { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 15px; color: white; outline: none; transition: 0.3s; }
+        .cyber-input:focus { border-color: var(--toska); box-shadow: 0 0 10px var(--toska-glow); }
+        
+        .scroll-snap-container { scroll-snap-type: y mandatory; overflow-y: scroll; height: 100vh; scroll-behavior: smooth; }
+        .snap-section { height: 100vh; scroll-snap-align: start; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; }
+        
+        .hidden-node { display: none !important; }
+        .full-page { min-height: 100vh; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 25px; position: fixed; top: 0; left: 0; z-index: 100; background: #000; }
+        .scan-line { width: 100%; height: 5px; background: var(--toska); position: absolute; z-index: 200; animation: scan 2.5s infinite linear; }
+        @keyframes scan { 0% { top: 0%; } 100% { top: 100%; } }
+        .custom-scroll::-webkit-scrollbar { width: 4px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: var(--toska); border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <div id="stage-landing" class="scroll-snap-container">
+        <section class="snap-section text-center animate__animated animate__fadeIn">
+            <p class="toska-text tracking-[0.5em] text-[10px] font-extrabold mb-4 uppercase">Supreme Intelligence V22</p>
+            <h1 class="text-4xl font-black italic tracking-tighter leading-none mb-8 uppercase">NOVELA<br><span class="toska-text">COMMUNITY</span></h1>
+            <div class="flex gap-2 mb-20">
+                <span class="text-[9px] px-4 py-1.5 border border-cyan-500 rounded bg-cyan-900/20 font-bold uppercase">Owner: Ikiy Gasima</span>
+                <span class="text-[9px] px-4 py-1.5 border border-white/20 rounded bg-white/5 font-bold uppercase">Wakil: Lia</span>
+            </div>
+            <div class="animate-bounce">
+                <p class="text-[9px] text-gray-500 uppercase tracking-widest mb-2">Scroll untuk Regulasi</p>
+                <div class="w-1 h-8 bg-cyan-500 mx-auto rounded-full"></div>
+            </div>
+        </section>
+
+        <section class="snap-section">
+            <div class="glass-card p-8 w-full max-w-sm animate__animated animate__fadeInUp">
+                <h2 class="toska-text text-xl font-black mb-4 uppercase italic text-center">Protocol Gaji</h2>
+                <div class="text-[11px] text-gray-300 leading-relaxed space-y-4 text-justify">
+                    <p>Sistem ini menilai kelayakan Anda secara otomatis. Gaji atau reward di Novela Community bersifat <span class="white font-bold underline">Dinamis</span>.</p>
+                    <div class="p-3 bg-cyan-500/10 border-l-4 border-cyan-500 rounded">
+                        <p class="text-[10px] italic">"Penghasilan Anda mengikuti grafik profit perusahaan. Visi yang tidak bermutu akan berakibat pada <span class="text-white font-bold">Penolakan Sistem.</span>"</p>
+                    </div>
+                </div>
+                <button onclick="toEdu()" class="mt-8 toska-bg w-full py-4 rounded-xl font-black text-xs uppercase shadow-lg">PELAJARI 6 DIVISI</button>
+            </div>
+        </section>
+    </div>
+
+    <div id="stage-edu" class="full-page hidden-node animate__animated animate__fadeIn">
+        <div class="glass-card p-6 w-full max-w-sm flex flex-col h-[80vh]">
+            <h2 class="toska-text text-center text-lg font-black mb-4 uppercase italic">Roblox Job Divisions</h2>
+            <div class="flex-grow overflow-y-auto custom-scroll pr-2 space-y-6 text-[10px] text-gray-300">
+                <div class="p-4 border border-white/5 rounded-xl bg-white/5">
+                    <h3 class="text-white font-bold mb-1 uppercase text-cyan-400">1. TEAM KREATIF</h3>
+                    <p>Fokus pada ide inovasi map, desain visual (UI/Banner), dan konsep event mingguan yang menarik bagi player.</p>
+                </div>
+                <div class="p-4 border border-white/5 rounded-xl bg-white/5">
+                    <h3 class="text-white font-bold mb-1 uppercase text-rose-500">2. TIM REPORT MAP</h3>
+                    <p>Tugas keamanan ketat: Monitoring log, melaporkan bug/glitch, dan membasmi cheater di dalam map.</p>
+                </div>
+                <div class="p-4 border border-white/5 rounded-xl bg-white/5">
+                    <h3 class="text-white font-bold mb-1 uppercase text-emerald-400">3. TEAM PROMOSI</h3>
+                    <p>Bertanggung jawab menyebarkan link map dan mengajak komunitas luar untuk meramaikan map Novela.</p>
+                </div>
+                <div class="p-4 border border-white/5 rounded-xl bg-white/5">
+                    <h3 class="text-white font-bold mb-1 uppercase text-yellow-400">4. TEAM AKTIF MAP</h3>
+                    <p>Wajib menjaga kestabilan jumlah player (traffic) dengan cara aktif bermain dan membantu player baru di server.</p>
+                </div>
+                <div class="p-4 border border-white/5 rounded-xl bg-white/5">
+                    <h3 class="text-white font-bold mb-1 uppercase text-purple-400">5. TEAM STREAMER</h3>
+                    <p>Melakukan Live Streaming map Novela di platform (TikTok/YT) untuk menarik massa secara real-time.</p>
+                </div>
+                <div class="p-4 border border-white/5 rounded-xl bg-white/5">
+                    <h3 class="text-white font-bold mb-1 uppercase text-orange-400">6. TEAM CONTENT CREATOR</h3>
+                    <p>Membuat konten video sinematik atau promosi map berkualitas tinggi untuk viralitas jangka panjang.</p>
+                </div>
+            </div>
+            <div id="timer-box" class="mt-4 p-4 border border-cyan-500/20 rounded-xl text-center bg-cyan-500/5">
+                <p class="text-[9px] uppercase text-gray-500 mb-1">Menganalisis Pemahaman Materi...</p>
+                <div id="timer-val" class="toska-text text-xl font-black italic">10</div>
+            </div>
+            <button id="btn-next-job" onclick="toJobs()" class="hidden-node mt-4 toska-bg w-full py-4 rounded-xl font-black text-xs uppercase animate__animated animate__pulse animate__infinite">PILIH DIVISI</button>
+        </div>
+    </div>
+
+    <div id="stage-jobs" class="full-page hidden-node animate__animated animate__fadeInRight">
+        <h2 class="toska-text text-center text-xl font-black mb-8 italic uppercase">Select Division</h2>
+        <div class="w-full max-w-sm space-y-2.5 overflow-y-auto custom-scroll pr-1 h-[70vh]">
+            <button onclick="pickJob('Team Kreatif')" class="w-full p-5 glass-card text-left active:scale-95 transition border border-white/5">
+                <div class="text-white text-sm font-black uppercase">TEAM KREATIF</div>
+            </button>
+            <button onclick="pickJob('Tim Report Map')" class="w-full p-5 glass-card text-left active:scale-95 transition border border-white/5">
+                <div class="text-rose-500 text-sm font-black uppercase">TIM REPORT MAP</div>
+            </button>
+            <button onclick="pickJob('Team Promosi')" class="w-full p-5 glass-card text-left active:scale-95 transition border border-white/5">
+                <div class="text-emerald-400 text-sm font-black uppercase">TEAM PROMOSI</div>
+            </button>
+            <button onclick="pickJob('Team Aktif Map')" class="w-full p-5 glass-card text-left active:scale-95 transition border border-white/5">
+                <div class="text-yellow-400 text-sm font-black uppercase">TEAM AKTIF MAP</div>
+            </button>
+            <button onclick="pickJob('Team Streamer')" class="w-full p-5 glass-card text-left active:scale-95 transition border border-white/5">
+                <div class="text-purple-400 text-sm font-black uppercase">TEAM STREAMER</div>
+            </button>
+            <button onclick="pickJob('Team Content Creator')" class="w-full p-5 glass-card text-left active:scale-95 transition border border-white/5">
+                <div class="text-orange-400 text-sm font-black uppercase">TEAM CONTENT CREATOR</div>
+            </button>
+        </div>
+    </div>
+
+    <div id="stage-visi" class="full-page hidden-node animate__animated animate__fadeIn">
+        <div class="glass-card p-7 w-full max-w-sm">
+            <h2 class="toska-text text-lg font-black mb-2 uppercase italic text-center">Strategic Vision</h2>
+            <p class="text-[9px] text-gray-500 mb-6 text-center italic">Uraikan strategi kerja Anda untuk memajukan map Novela. Kualitas tulisan menentukan besaran reward.</p>
+            <textarea id="vision-input" class="w-full h-48 cyber-input p-5 text-[11px] leading-relaxed" placeholder="Tulis rencana kerja profesional Anda..."></textarea>
+            <button onclick="analyzeVision()" class="w-full mt-6 py-4 toska-bg font-black text-xs rounded-xl shadow-lg uppercase">Analyze & Submit</button>
+        </div>
+    </div>
+
+    <div id="stage-trap" class="full-page hidden-node animate__animated animate__zoomIn">
+        <div class="glass-card p-10 w-full max-w-sm text-center border-2 border-rose-500/20">
+            <h2 class="text-rose-500 text-lg font-black mb-4 uppercase italic">⚠️ Integrity Test</h2>
+            <p class="text-[11px] text-gray-300 mb-10 font-bold leading-relaxed">Jika operasional map sedang sulit dan laba menurun, apa langkah profesional Anda?</p>
+            <div class="space-y-4">
+                <button onclick="forceFail('Low Integrity')" class="w-full p-4 border border-white/10 rounded-xl text-left text-[10px]">Berhenti bekerja sampai situasi membaik.</button>
+                <button onclick="toScan()" class="w-full p-4 border border-white/10 rounded-xl text-left text-[10px]">Tetap loyal dan berkontribusi lebih keras demi kejayaan map.</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="stage-scan" class="full-page hidden-node">
+        <div id="scan-line" class="scan-line"></div>
+        <div class="glass-card p-12 text-center relative z-20 w-full max-w-sm">
+            <div id="scan-loading">
+                <p class="toska-text text-[11px] font-black animate-pulse uppercase">Searching Hidden Treasure...</p>
+                <p class="text-[8px] text-gray-600 mt-2 italic uppercase tracking-widest">Semantic Evaluation in Progress</p>
+            </div>
+            
+            <div id="scan-result" class="hidden-node animate__animated animate__zoomIn">
+                <div class="flex justify-center mb-6">
+                    <img src="https://files.catbox.moe/5m3l3q.png" class="w-24 drop-shadow-[0_0_15px_rgba(0,251,255,0.8)]" alt="Diamond Treasure"> 
+                </div>
+                <div class="toska-text text-5xl font-black mb-2 italic"><span id="rbx-display">0</span> ROBUX</div>
+                <p class="text-cyan-400 text-[10px] font-extrabold mb-10 uppercase tracking-widest">Initial Grant | Score: <span id="score-display">0</span>%</p>
+                <button onclick="toFinal()" class="w-full py-4 bg-white text-black font-black rounded-2xl text-[10px] uppercase shadow-lg shadow-cyan-500/20">Final Registrasi</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="stage-final" class="full-page hidden-node animate__animated animate__fadeInUp">
+        <div class="glass-card p-8 w-full max-w-sm border-2 border-cyan-500/20">
+            <h2 class="toska-text text-center text-xl font-black mb-8 uppercase italic">Official Dossier</h2>
+            <div class="space-y-4 mb-10">
+                <input type="text" id="fn" placeholder="Nama Lengkap" class="w-full cyber-input p-4 text-xs">
+                <input type="number" id="fa" placeholder="Umur" class="w-full cyber-input p-4 text-xs">
+                <input type="text" id="fu" placeholder="Username Roblox" class="w-full cyber-input p-4 text-xs">
+            </div>
+            <button onclick="sendWA('owner')" class="w-full py-4 toska-bg text-[10px] font-black rounded-2xl mb-3 shadow-lg uppercase">Send to Ikiy (Owner)</button>
+            <button onclick="sendWA('wakil')" class="w-full py-4 border border-white/20 text-[10px] font-black rounded-2xl uppercase">Send to Lia (Wakil)</button>
+        </div>
+    </div>
+
+    <script>
+        let userData = { job: "", score: 0, rbx: 0, visi: "" };
+
+        function nav(hideId, showId) {
+            if(hideId) document.getElementById(hideId).classList.add('hidden-node');
+            if(showId) {
+                document.getElementById(showId).classList.remove('hidden-node');
+                window.scrollTo(0,0);
+            }
+        }
+
+        function toEdu() {
+            document.getElementById('stage-landing').style.display = 'none';
+            nav(null, 'stage-edu');
+            let count = 10;
+            const timer = setInterval(() => {
+                count--;
+                document.getElementById('timer-val').innerText = count;
+                if(count <= 0) {
+                    clearInterval(timer);
+                    document.getElementById('timer-box').classList.add('hidden-node');
+                    document.getElementById('btn-next-job').classList.remove('hidden-node');
+                }
+            }, 1000);
+        }
+
+        function toJobs() { nav('stage-edu', 'stage-jobs'); }
+
+        function pickJob(j) {
+            userData.job = j;
+            nav('stage-jobs', 'stage-visi');
+        }
+
+        function analyzeVision() {
+            const v = document.getElementById('vision-input').value.toLowerCase();
+            
+            // Hidden Minimum Length
+            if(v.length < 50) {
+                alert("SISTEM REJECT: Strategi tidak bermutu atau terlalu singkat!");
+                return window.location.reload();
+            }
+
+            // Semantic Analysis
+            const keywords = ['map', 'novela', 'ikiy', 'promosi', 'kreatif', 'report', 'bug', 'player', 'konten', 'stream', 'aktif', 'bantu', 'loyal', 'profit', 'sukses'];
+            const toxic = ['jelek', 'asal', 'buruk', 'malas', 'kontol', 'memek', 'goblok', 'anjir', 'gak niat', 'iseng'];
+            
+            let keyScore = 0;
+            keywords.forEach(w => { if(v.includes(w)) keyScore++; });
+
+            let toxicFound = false;
+            toxic.forEach(w => { if(v.includes(w)) toxicFound = true; });
+
+            // Logic Cerdas
+            if(toxicFound || keyScore < 2) {
+                userData.score = Math.floor(Math.random() * 10); // Skor cuma 0-9%
+            } else {
+                userData.score = 65 + (keyScore * 3);
+                if(userData.score > 100) userData.score = 100;
+            }
+
+            userData.visi = v;
+            nav('stage-visi', 'stage-trap');
+        }
+
+        function toScan() {
+            nav('stage-trap', 'stage-scan');
+            // Strict 50% Probability for 500 Robux
+            const passProb = Math.random() < 0.5;
+
+            setTimeout(() => {
+                document.getElementById('scan-line').style.display = 'none';
+                document.getElementById('scan-loading').style.display = 'none';
+                document.getElementById('scan-result').classList.remove('hidden-node');
+
+                if(userData.score >= 70 && passProb) {
+                    userData.rbx = 500;
+                    userData.score = 100;
+                } else if(userData.score >= 70) {
+                    userData.rbx = 50;
+                    userData.score = 75;
+                } else {
+                    userData.rbx = 5;
+                    // Skor tetap rendah dari analyzeVision
+                }
+                
+                document.getElementById('rbx-display').innerText = userData.rbx;
+                document.getElementById('score-display').innerText = userData.score;
+            }, 3500);
+        }
+
+        function toFinal() { nav('stage-scan', 'stage-final'); }
+
+        function forceFail(msg) {
+            alert(`SISTEM GAGAL: ${msg}. Standar loyalitas Anda rendah.`);
+            window.location.reload();
+        }
+
+        function sendWA(t) {
+            const n = document.getElementById('fn').value;
+            const a = document.getElementById('fa').value;
+            const u = document.getElementById('fu').value;
+            if(!n || !a || !u) return alert("Dossier data tidak lengkap!");
+
+            const num = (t === 'owner') ? "6287812445345" : "62895415244645";
+            const adm = (t === 'owner') ? "OWNER IKIY GASIMA" : "WAKIL LIA";
+            const msg = `*CORPORATE DOSSIER NOVELA V22*\n*To:* ${adm}\n\n👤 *Nama:* ${n}\n📅 *Umur:* ${a}\n🎮 *User:* ${u}\n🛠 *Job Divisi:* ${userData.job}\n📊 *Intelligence Score:* ${userData.score}%\n💎 *Treasure Found:* ${userData.rbx} ROBUX\n\n📝 *Strategic Vision:* "${userData.visi}"\n\n_System: Automated Semantic Evaluation V22._`;
+            window.open(`https://wa.me/${num}?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
